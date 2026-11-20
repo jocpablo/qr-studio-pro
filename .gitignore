@@ -1,0 +1,5 @@
+# Datos y clave del servidor: nunca subirlos al repositorio
+qr-data.json
+qr-data.json.tmp
+node_modules/
+.env

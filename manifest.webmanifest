@@ -1,0 +1,17 @@
+{
+  "name": "QR Studio Pro",
+  "short_name": "QR Studio",
+  "description": "Generador, lector y gestor de códigos QR: diseño avanzado, verificación real, lotes, hojas de impresión y QR dinámicos.",
+  "lang": "es",
+  "start_url": "./qr-studio-pro.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0c16",
+  "theme_color": "#0a0c16",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

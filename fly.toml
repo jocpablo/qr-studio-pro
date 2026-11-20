@@ -1,0 +1,27 @@
+# Fly.io: fly launch --copy-config --no-deploy && fly volumes create qr_data --size 1 && fly secrets set ADMIN_TOKEN=... && fly deploy
+app = "qr-studio-pro"
+primary_region = "mia"
+
+[build]
+
+[env]
+  PORT = "8787"
+  DATA_FILE = "/data/qr-data.json"
+
+[[mounts]]
+  source = "qr_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8787
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    path = "/api/health"
+    timeout = "5s"

@@ -1,0 +1,14 @@
+{
+  "name": "qr-studio-pro",
+  "version": "1.0.0",
+  "description": "Generador, lector y gestor de códigos QR con servidor de QR dinámicos",
+  "private": true,
+  "main": "qr-server.js",
+  "scripts": {
+    "start": "node qr-server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

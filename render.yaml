@@ -1,0 +1,17 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# Despliegue: en Render → New → Blueprint → elige este repositorio.
+services:
+  - type: web
+    name: qr-studio-pro
+    runtime: docker
+    plan: starter          # Necesario para el disco persistente (el plan gratuito borra los datos al reiniciar)
+    healthCheckPath: /api/health
+    envVars:
+      - key: ADMIN_TOKEN
+        generateValue: true  # Render genera una clave segura; la verás en Environment
+      - key: DATA_FILE
+        value: /data/qr-data.json
+    disk:
+      name: qr-data
+      mountPath: /data
+      sizeGB: 1
